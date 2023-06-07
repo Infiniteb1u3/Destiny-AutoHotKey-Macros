@@ -7,6 +7,7 @@ All macros have a Force Quit mapped to <<HOME>> by default
 
 1) GOTD Dungeon Cheese Script
    - For use with the witherhoard damage exploit, enables you to solo hold witherhoard, maintain a perfect timing with tractor cannon debuffs and darci jolt
+   - All functions require you to start the exploit by damaging the boss and dying and then rezzing manually before starting the script
    
    <<F9>>: Witherhoard solo hold requires you to run double special with an auto loading energy grenade launcher, ensure you empty your heavy and energy ammo before starting
        <<F10>> starts a variant of F9 with smoke bombs interspace between witherhoard shots, optimized for max strength smoke bomb cool down
