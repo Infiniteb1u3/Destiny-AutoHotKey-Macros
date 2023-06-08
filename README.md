@@ -7,9 +7,9 @@ All macros have a Force Quit mapped to -HOME- by default, Functions are all Paus
 
 1) GOTD Dungeon Cheese Script
    - Contains 3 main macros
-      -Witerhoard Solo Macro
-      -Darci Jolt Macro
-      -Tractor Macro
+      - Witherhoard Solo Macro
+      - Darci Jolt Macro
+      - Tractor Macro
 
 2) Golgoroth AFK Script
    - Works with all 3 Classes, requires specific build for each
