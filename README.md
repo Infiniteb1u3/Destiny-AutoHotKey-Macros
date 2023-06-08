@@ -3,7 +3,7 @@
 Contains Diffrent macros for Destiny 2 farms or cheeses
 Requires AutoHotKey Installed
 
-All macros have a Force Quit mapped to -HOME- by default
+All macros have a Force Quit mapped to -HOME- by default, Functions are all Paused with the tilde key
 
 1) GOTD Dungeon Cheese Script
    - For use with the witherhoard damage exploit, enables you to solo hold witherhoard, maintain a perfect timing with tractor cannon debuffs and darci jolt
