@@ -1,7 +1,8 @@
 # Destiny-AutoHotKey-Macros
 
-Contains Diffrent macros for Destiny 2 farms or cheeses
 Requires AutoHotKey Installed
+Contains Diffrent macros for Destiny 2 farms or cheeses
+
 
 All macros have a Force Quit mapped to -HOME- by default, Functions are all Paused with the tilde key
 
