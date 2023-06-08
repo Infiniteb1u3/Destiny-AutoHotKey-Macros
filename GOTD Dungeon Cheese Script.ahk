@@ -2,8 +2,20 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#MaxThreadsPerHotkey 2
+
+; KEY ASSIGNMMENT
+
+sh:= "click" ; shoot
+ad:= "click down right" ; Aim down sight start
+us:= "click up right" ; Aim down sight stop
+re:= "r" ; "Reload"
+gn:= "q" ; Grenade
+ml:= "v" ; Charged melee Ability
+ca:= "c" ; Class Ability (Rift, dodge, Barricade)
 
 Home:: Exitapp ; Force kills the script
+`:: Pause, Toggle
 
 F5:: ; tractor cannon
 
@@ -33,12 +45,12 @@ loop
 		
 		Send {click}
 		sleep 500
-		send {r}
+		send, %re%
 		send {click up right}
 		Sleep 3500
 		send {click down right}
 		Sleep 4500
-		send {q}
+		send, %gn%
 		sleep 8800
 	}
 Return
@@ -62,7 +74,7 @@ loop
 		
 		Send {click}
 		sleep 500
-		send {r}
+		send, %re%
 		send {click up right}
 		Sleep 3500
 		send {click down right}
@@ -122,7 +134,7 @@ loop
 		sleep 500
 		send {2}
 		sleep 500
-		send {v} ; melee key
+		send, %ml%
 		sleep 500
 		send {click}
 		Sleep 500
