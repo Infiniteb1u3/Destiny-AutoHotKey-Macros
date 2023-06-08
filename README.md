@@ -12,4 +12,5 @@ All macros have a Force Quit mapped to -HOME- by default, Functions are all Paus
       -Tractor Macro
 
 2) Golgoroth AFK Script
-   -Works with all 3 Classes, requires specific build for each
+   - Works with all 3 Classes, requires specific build for each
+   - Require Golgroth Maze Checkpoint
