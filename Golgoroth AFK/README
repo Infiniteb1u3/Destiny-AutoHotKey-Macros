@@ -1,5 +1,34 @@
-All macros have a Force Quit mapped to -HOME- by default, Functions are all Paused with the tilde key
+All macros have a Force Quit mapped to -HOME- by default, Functions are all Paused with the tilde key, activate and deactivate each macro with indicated function keys
 
 Golgoroth AFK Script
 
+F5) Hunter AFK Macro
+  -Requires you to run Solar Hunter
+    -Melee: Proximity Knife 
+    -Exotic:  Calibans Hand (Arms, optional)
+    -Mod:  Triple Melee Kickstart (Arms)
+    -Aspect:  Knock 'Em Down
+    -Fragment:  Ember of Torches
+    -Fragment:  Ember of Searing
+    -Fragment:  Ember of Solace
 
+F8) Titan AFK Macro
+  -Requires to run Solar Titan
+    -Grenade: Fusion Grenade
+    -Exotic:  Ashen Wake (Arms)
+    -Mod:  3x Grenade Kickstart (Arm)
+    
+F9) Warlock AFK Macro
+  -Requires you to run Arc Warlock
+    -Grenade:  Pulse Grenades
+    -Melee: Ball Lightning
+    -Exotic:  Fallen Sunstar (Helmet, Prefered)
+    -Exotic:  Crown of tempests (Helmet, not as optimal)
+    -Mod: 3x Bolstering Detonation (Arms)
+    -Mod: 3x Elemental Charge (Legs)
+    -Mod: 3x Utility Kickstart (Bond/Class Item)
+    -Aspect:  Electrostatic Mind
+    -Aspect:  Arc Soul
+    -Spark of Ions
+    -Spark of Shock
+    -Spark of Magnitude
