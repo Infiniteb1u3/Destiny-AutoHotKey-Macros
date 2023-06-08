@@ -13,4 +13,7 @@ All macros have a Force Quit mapped to -HOME- by default, Functions are all Paus
 
 2) Golgoroth AFK Script
    - Works with all 3 Classes, requires specific build for each
+      - Hunter Afk Macro
+      - Titan Afk Macro
+      - Warlock Afk Macro
    - Require Golgroth Maze Checkpoint
