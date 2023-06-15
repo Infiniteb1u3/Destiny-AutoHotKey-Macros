@@ -1,6 +1,9 @@
 Requires Autohotkey installed
 PICK your screen resolution
 
+Built for 1440p, 1080p and 4k onitors have not been tested yet, please inform me if there are issues with them
+
+
 F4 for 1 round of fishing
 F5 for automatic fishing
 F8 for a loop of 5
