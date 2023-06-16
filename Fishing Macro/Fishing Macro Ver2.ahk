@@ -1,4 +1,4 @@
-﻿;========================================================================
+;========================================================================
 ; 	STARTUP SECTION
 ;========================================================================
 
@@ -67,18 +67,7 @@ Home:		Force quit
 			gosub, SettingsRead
 			if Hidestartup = 0
 				{
-				msgbox, 
-				(
-			Resolution :	%mp%
-Interact Keybind:	%it%
-		
-Controls:
-F4:		Fish once
-F5:		Toggle fishing loop
-F9:		Display current settings
-F10:		Change settings
-Home:		Force quit
-			)
+				gosub, currentsettingsdisplay
 				}
 			else
 				{
@@ -173,17 +162,26 @@ Return
 ;========================================================================
 
 currentsettingsdisplay:
-Msgbox,
+msgbox, 
 (
 Resolution :	%mp%
 Interact Keybind:	%it%
+		
+Controls:
+F4:		Fish once
+F5:		Toggle fishing loop
+F9:		Display current settings
+F10:		Change settings
+Home:		Force quit
 )
 Return
+
+
 
 settingsgui:
 Gui Add, Text, x35 y8 w55 h23 +0x200, Resolution:
 Gui Add, DropDownList, x120 y8 w90 +altsubmit choose%nm% vnm, 3840 x 2160|2560 x 1600|2560 x 1440|2048 x 1536|1920 x 1440|1920 x 1200|1920 x 1080|1680 x 1050|1600 x 1200|1600 x 1024|1600 x 900|1440 x 900|1366 x 768|1360 x 768|1280 x 1024|1280 x 960|1280 x 800|1280 x 768|1280 x 720
-Gui Add, Button, x220 y7 w50 h23 , Reset
+Gui Add, Button, x220 y7 w50 h23 , Auto
 Gui Add, Text, x35 y40 w72 h16 +0x200, Interact:
 Gui Add, Edit, x120 y40 w150 h21 vit, %it%
 Gui Add, CheckBox,x35 y72 Checked%Hidestartup% vHidestartup , Hide prompts on start up
@@ -197,12 +195,7 @@ Return
 ButtonSave:
 gui, Submit
 gosub, setguicurrent
-msgbox, 
-	(
-	Setting Saved:
-Resolution:	%mp%
-Interact Key:	%it%
-	)
+gosub, currentsettingsdisplay
 gosub, SettingsWrite
 Gui, Destroy
 Return
@@ -212,7 +205,7 @@ Gui, Cancel
 Gui, Destroy
 return
 
-ButtonReset:
+ButtonAuto:
 gosub, defaultreso
 gui, destroy
 gosub, settingsgui
