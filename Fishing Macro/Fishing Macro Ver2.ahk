@@ -1,4 +1,16 @@
 ;========================================================================
+; 	Fishing Macro Version 2.1
+;========================================================================
+;
+;	Controls:
+;		F4:		Fish once
+;		F5:		Toggle fishing loop
+;		F6:		Toggle Anti AFK Fishing
+;		F9:		Display current settings
+;		F10:	Change settings
+;		Home:	Force quit
+;
+;========================================================================
 ; 	STARTUP SECTION
 ;========================================================================
 
@@ -9,6 +21,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #MaxThreadsPerHotkey 2
 CoordMode, Pixel, Screen
 
+;function for arrays
 HasVal(haystack, needle) {
     for index, value in haystack
         if (value = needle)
@@ -18,9 +31,12 @@ HasVal(haystack, needle) {
     return 0
 }
 
+;Data array for resolution numbers 
 masterarray := ["3840 x 2160","2560 x 1600","2560 x 1440","2048 x 1536","1920 x 1440","1920 x 1200","1920 x 1080","1680 x 1050","1600 x 1200","1600 x 1024","1600 x 900","1440 x 900","1366 x 768","1360 x 768","1280 x 1024","1280 x 960","1280 x 800","1280 x 768","1280 x 720"]
 xarray := [3840,2560,2560,2048,1920,1920,1920,1680,1600,1600,1600,1440,1366,1360,1280,1280,1280,1280,1280]
 yarray := [2160,1600,1440,1536,1440,1200,1080,1050,1200,1024,900,900,768,768,1024,960,800,768,720]
+
+;Pixel location of interact prompt (multiply by resolution)
 BaseX1 := 0.461
 BaseX2 := 0.471
 BaseY := 0.684
@@ -51,6 +67,7 @@ Interact Keybind:	%it%
 Controls:
 F4:		Fish once
 F5:		Toggle fishing loop
+F6: 	Toggle fishing loop (Anti AFK)
 F9:		Display current settings
 F10:		Change settings
 Home:		Force quit
@@ -156,6 +173,28 @@ sleep 500
 Send % "{" it " up}"
 sleep 1500
 Return
+
+fishN:
+	
+send %it%
+sleep 100
+Send % "{" it " down}"
+sleep 2000
+Send % "{" it " up}"
+sleep 500
+loop
+	{
+	PixelSearch, x, y, locationX1, locationY, locationX2, locationY, 0x333333,, Fast
+	found := !ErrorLevel
+	If !found
+	sleep 100
+	}
+Until found
+Send % "{" it " down}"
+sleep 500
+Send % "{" it " up}"
+sleep 1500
+Return
 	
 ;========================================================================
 ; 	GUI SECTION
@@ -170,6 +209,7 @@ Interact Keybind:	%it%
 Controls:
 F4:		Fish once
 F5:		Toggle fishing loop
+F6:		Toggle Anti AFK Fishing
 F9:		Display current settings
 F10:		Change settings
 Home:		Force quit
@@ -255,6 +295,27 @@ loop
 	}
 Return
 
+F6:: ;loop fishing
+
+Toggle := !Toggle
+loop
+	{
+    If not toggle
+		{
+		break
+		}
+	else
+		{
+		gosub, fish
+		send {s down}
+		sleep 100
+		send {s up}
+		send {w down}
+		sleep 100
+		send {w up}
+		}
+	}
+Return
 
 F10::
 
@@ -286,6 +347,10 @@ Return
 
 F9::
 gosub, currentsettingsdisplay
+Return
+
+`::
+Reload
 Return
 
 Home::
