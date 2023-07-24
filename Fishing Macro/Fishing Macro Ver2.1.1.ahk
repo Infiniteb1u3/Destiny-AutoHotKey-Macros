@@ -6,8 +6,10 @@
 ;		F4:		Fish once
 ;		F5:		Toggle fishing loop
 ;		F6:		Toggle Anti AFK Fishing
+;		F7:		Toggle Anti AFK
 ;		F9:		Display current settings
 ;		F10:	Change settings
+;		`:		Reloads the script
 ;		Home:	Force quit
 ;
 ;========================================================================
