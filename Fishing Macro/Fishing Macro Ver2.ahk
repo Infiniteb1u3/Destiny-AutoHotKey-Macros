@@ -307,12 +307,36 @@ loop
 	else
 		{
 		gosub, fish
-		send {s down}
-		sleep 100
-		send {s up}
-		send {w down}
-		sleep 100
-		send {w up}
+		sleep 300
+		send {a down}
+		sleep 20
+		send {a up}
+		sleep 50
+		send {d down}
+		sleep 20
+		send {d up}
+		}
+	}
+Return
+
+F7::
+Toggle := !Toggle
+loop
+	{
+    If not toggle
+		{
+		break
+		}
+	else
+		{
+		send {a down}
+		sleep 20
+		send {a up}
+		sleep 50
+		send {d down}
+		sleep 20
+		send {d up}
+		sleep 1500
 		}
 	}
 Return
